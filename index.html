@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Battle Arena 3D</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <section id="menu" class="menu">
+    <div class="panel"><div class="logo"><span>BATTLE</span><strong>ARENA</strong></div>
+      <p>PROTOTIPO 3D · ESTILO ARCADE</p>
+      <button id="play">JUGAR AHORA</button>
+      <div class="controls"><b>WASD</b> Mover · <b>SHIFT</b> Correr · <b>ESPACIO</b> Saltar · <b>CLICK</b> Disparar</div>
+    </div>
+  </section>
+  <div id="hud" class="hud hidden">
+    <div class="brand">BATTLE <b>ARENA</b></div><div class="status">● ZONA SEGURA</div>
+    <canvas id="minimap" width="170" height="170"></canvas>
+    <div class="bottom"><div class="health"><i id="healthBar"></i></div><b id="healthText">100</b><div class="ammo"><b id="ammoText">30</b> / 120</div></div>
+  </div><div id="crosshair" class="crosshair hidden"></div>
+  <div id="damage" class="damage"></div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
